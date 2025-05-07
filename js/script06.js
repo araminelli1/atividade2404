@@ -1,0 +1,17 @@
+function calcularFatorial() {
+  const numero = parseInt(document.getElementById("numero").value);
+  const resultadoElemento = document.getElementById("resultado");
+
+  if (isNaN(numero) || numero < 0) {
+    resultadoElemento.textContent =
+      "Por favor, digite um número inteiro não negativo.";
+    return;
+  }
+
+  let fatorial = 1;
+  for (let i = 2; i <= numero; i++) {
+    fatorial *= i;
+  }
+
+  resultadoElemento.textContent = `O fatorial de ${numero} é ${fatorial}.`;
+}
